@@ -1,0 +1,10 @@
+docker run -d -it --name web-search ubuntu sh -c "while true; do echo 'Input website:'; read website; echo 'Searching..'; sleep 1; curl http://$website; done"
+
+docker exec -it web-search bash
+
+apt-get update
+
+apt-get -y install curl
+
+curl --version
+> curl 8.5.0
